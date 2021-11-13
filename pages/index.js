@@ -21,6 +21,10 @@ export default function Home() {
           <button onClick={() => {
             Sentry.captureMessage("Something went wrong");
           }}>error to sentry</button>
+  
+          <button onClick={() => {
+            throw new Error('error')
+          }}>error to sentry with throw</button>
         </div>
 
         <p className={styles.description}>
